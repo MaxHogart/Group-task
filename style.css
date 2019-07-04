@@ -30,6 +30,7 @@ h1 {
 .animate-elements {
     background-color: #fff;
 }
+<<<<<<< HEAD
 
 /* .wrapper-6 {
     position: relative;
@@ -66,6 +67,48 @@ h1 {
     top: 15%;
     width: 0%;
     height: 0%;    
+=======
+/* saldan roma */
+.wrapper-6 {
+	width: 150px;
+	height: 100px;
+	position: relative;
+}
+.animation-6 {
+	animation: rotation 2s infinite linear;
+	position: relative;
+	width: 100px;
+	height: 100px;
+	border-radius: 50%;
+	margin-left: auto;
+	margin-right: auto;
+}
+.first-disk-6  {
+	animation-duration: 2s;
+	animation-name: first-disk-6;
+	animation-iteration-count: infinite;
+	animation-timing-function: linear;
+	border-radius: 50%;
+	position: absolute;
+	right: 15%;
+	top: 35%;
+	width: 30%;
+	height: 30%;
+	box-shadow: 0 0 25px white;
+}
+.second-disk-6  {
+	position: absolute;
+	border-radius: 50%;
+	right: 35%;
+	top: 15%;
+	width: 0%;
+	height: 0%;
+	animation-duration: 2s;
+	animation-name: second-disk-6;
+	animation-iteration-count: infinite;	
+	animation-timing-function: linear;
+	box-shadow: 0 0 25px white;
+>>>>>>> 6ecd32f080e6ba513e994f7cbd0452d01ca75b9a
 }
 
 @keyframes rotation {
