@@ -33,9 +33,6 @@ h1 {
     background-color: #fff;
 }
 
-/* .wrapper-6 {
-    position: relative;
-} */
 
 .animation-6 {
     animation: rotation 2s infinite linear;
@@ -114,8 +111,6 @@ h1 {
     }
 }
 
-/* saldan roma */
-/* @Perturabo4 */
 .pulse_animation {
     position: relative;
     width: 100%;
@@ -174,8 +169,6 @@ h1 {
         transform: translate(-50%, -50%) scale(.3);
     }
 }
-
-/* @Perturabo4 */
 
 
 .animation-2 {
@@ -342,11 +335,8 @@ h1 {
 }
 
 .container {
-    background: #fd9905;
     padding: 20px;
     display: flex;
-    width: 150px;
-    height: 100px;
     align-items: flex-end;
     justify-content: center;
 }
@@ -354,7 +344,6 @@ h1 {
 .fifth-animation-circle {
     width: 15px;
     height: 15px;
-    background: #fff;
     border-radius: 50%;
 }
 
