@@ -6,11 +6,11 @@ body {
     background-color: #fe9906;
     color: #fff;
     font-family: arial;
-    padding: 0;
+    padding: 50px;
 }
 
 h1 {
-    margin-top: 150px;
+    margin-top: 50px;
     text-align: center;
     font-weight: 500;
 }
@@ -18,13 +18,15 @@ h1 {
 .flex-container {
     display: flex;
     margin: auto;
-    width: 900px;
+    width: 500px;
     justify-content: center;
+    flex-wrap: wrap;
 }
 
 .loader {
     width: 150px;
     height: 100px;
+    margin-top: 20px;
 }
 
 .animate-elements {
@@ -338,3 +340,74 @@ h1 {
 .rotated:nth-child(12) .square {
     animation-delay: 0.1s;
 }
+
+.container {
+    background: #fd9905;
+    padding: 20px;
+    display: flex;
+    width: 150px;
+    height: 100px;
+    align-items: flex-end;
+    justify-content: center;
+}
+
+.fifth-animation-circle {
+    width: 15px;
+    height: 15px;
+    background: #fff;
+    border-radius: 50%;
+}
+
+.fifth-animation-moving-circle {
+    margin-right: 5px;
+    animation: moving 0.6s infinite;
+}
+
+.fifth-animation-appearing-circle {
+    transform: translateX(-47.5px);
+    animation: appearing 0.6s infinite;
+}
+
+.fifth-animation-disappearing-circle {
+    animation: disappearing 0.6s infinite;
+}
+
+@keyframes moving {
+    from {
+        transform: translateX(0);
+    }
+    to {
+        transform: translateX(20px);
+    }
+  }
+
+
+  @keyframes appearing {
+    from {
+        margin-right: 7.5px;
+        margin-bottom: 7.5px;
+        width: 0px;
+        height: 0px;
+    }
+    to {
+        margin-right: 0;
+        margin-bottom: 0;
+        width: 15px;
+        height: 15px;
+    }
+  }
+
+  @keyframes disappearing {
+    from {
+        margin-left: 0;
+        margin-bottom: 0;
+        width: 15px;
+        height: 15px;
+    }
+    to {
+        margin-left: 7.5px;
+        margin-bottom: 7.5px;
+        width: 0px;
+        height: 0px;
+    }
+  }
