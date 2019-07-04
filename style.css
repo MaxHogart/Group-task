@@ -192,28 +192,16 @@ h1 {
 }
 
 .square {
-    width: 16.66%;
+    width: 18.7%;
     height: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
     animation: scaling 1.2s linear infinite;
 }
 
 .square--white {
-    background: rgba(255, 255, 255, 0.5);
+    background-color: #fff;
 
 }
 
-.circle {
-    width: 100%;
-    height: 100%;
-    border-radius: 50%;
-}
-
-.circle--white {
-    background: rgba(255, 255, 255, 0.9);
-}
 
 .rotated:nth-child(1) {
     transform: translateY(-50%) rotate(30deg) scale(1);
@@ -296,16 +284,8 @@ h1 {
 }
 
 @keyframes scaling {
-
-    0%,
-    20%,
-    40%,
-    60%,
-    80%,
-    100% {}
-
     50% {
-        box-shadow: 0 0 4px 4px rgba(255, 255, 255, 1);
+        box-shadow: 0 0 3px 3px rgba(255, 255, 255, 1);
         background: rgba(255, 255, 255, 1);
         border-radius: 10%;
     }
