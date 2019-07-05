@@ -71,7 +71,7 @@ h1 {
     }
 
     40% {
-        top: 30px;
+        top: 35px;
         transform: scale(1);
     }
 
@@ -80,20 +80,20 @@ h1 {
     }
 
     50% {
-        top: 35px;
-        transform: scale(1.5, 0.5);
+        top: 40px;
+        transform: scale(1.8, 0.5);
         border-radius: 50% 50% 20% 20%;
     }
 
     52% {
-        top: 38px;
-        transform: scale(2, 0.3);
+        top: 43px;
+        transform: scale(2.3, 0.3);
         border-radius: 50% 50% 20% 20%;
     }
 
     54% {
-        top: 35px;
-        transform: scale(1.4, 0.5);
+        top: 40px;
+        transform: scale(2, 0.5);
         border-radius: 50% 50% 20% 20%;
     }
 
@@ -103,7 +103,7 @@ h1 {
     }
 
     60% {
-        top: 30px;
+        top: 35px;
         transform: scale(1);
     }
 }
@@ -278,8 +278,8 @@ h1 {
     position: absolute;
     top: 50%;
     left: 50%;
-    width: 90px;
-    height: 90px;
+    width: 70px;
+    height: 70px;
     border-radius: 50%;
 }
 
@@ -336,7 +336,7 @@ h1 {
     height: 80%;
     margin-left: 5px;
     transform-origin: center bottom;
-    box-shadow:1px 1px 1px rgba(28, 28, 61, 0.329);
+    box-shadow: 1px 1px 1px rgba(28, 28, 61, 0.329);
 }
 
 .animation-ball {
@@ -350,38 +350,37 @@ h1 {
 }
 
 .animation-bar:nth-child(1) {
-    left: 0;
+    margin-left: 25px;
     transform: scale(1, .2);
     animation: scaling-bar-1 4s infinite;
 }
 
 .animation-bar:nth-child(2) {
-    left: 0;
+    
     transform: scale(1, .4);
     animation: scaling-bar-2 4s infinite;
 }
 
 .animation-bar:nth-child(3) {
-    left: 0;
+   
     transform: scale(1, .6);
-    animation: scaling-bar-3 4s infinite;
 }
 
 .animation-bar:nth-child(4) {
-    left: 0;
+    
     transform: scale(1, .8);
     animation: scaling-bar-4 4s infinite;
 }
 
 .animation-bar:nth-child(5) {
-    left: 0;
+    
     transform: scale(1, 1);
     animation: scaling-bar-5 4s infinite;
 }
 
 @keyframes jumping-ball-4 {
     0% {
-      transform: translate(0, 0);
+        transform: translate(0, 0);
     }
 
     5% {
@@ -449,113 +448,79 @@ h1 {
     }
 
     90% {
-      transform: translate(0, -64px)
+        transform: translate(0, -64px)
     }
 
     100% {
-      transform: translate(0, 0);
+        transform: translate(0, 0);
     }
-  }
-  
-  @keyframes scaling-bar-1 { 
-    0% {
-      transform: scale(1, .2);
+}
+
+@keyframes scaling-bar-1 {
+
+    0%,
+    40%,
+    100% {
+        transform: scale(1, .2);
     }
 
-    40%{
-      transform: scale(1, .2);
-    }
-
-    50% {
-      transform: scale(1, 1);
-    }
-
+    50%,
     90% {
-      transform: scale(1,1);
+        transform: scale(1, 1);
     }
 
+}
+
+@keyframes scaling-bar-2 {
+
+    0%,
+    40%,
     100% {
-      transform: scale(1,.2);
-    }
-  }
-  @keyframes scaling-bar-2 { 
-    0% {
-      transform: scale(1, .4);
+        transform: scale(1, .4);
     }
 
-    40% {
-      transform: scale(1, .4);
-    }
 
-    50% {
-      transform: scale(1, .8);
-    }
-
+    50%,
     90% {
-      transform: scale(1, .8);
+        transform: scale(1, .8);
     }
 
+
+}
+
+
+@keyframes scaling-bar-4 {
+
+    0%,
+    40%,
     100% {
-      transform: scale(1, .4);
-    }
-  }
-
-  @keyframes scaling-bar-3 { 
-    0% {
-      transform: scale(1, .6);
+        transform: scale(1, .8);
     }
 
-    100% {
-      transform: scale(1, .6);
-    }
-  }
 
-  @keyframes scaling-bar-4 { 
-    0% {
-      transform: scale(1, .8);
-    }
 
-    40% {
-      transform: scale(1, .8);
-    }
-
-    50% {
-      transform: scale(1, .4);
-    }
-
+    50%,
     90% {
-      transform: scale(1, .4);
+        transform: scale(1, .4);
     }
+}
 
+@keyframes scaling-bar-5 {
+
+    0%,
+    40%,
     100% {
-      transform: scale(1, .8);
-    }
-  }
-
-  @keyframes scaling-bar-5 { 
-    0% {
-      transform: scale(1, 1);
+        transform: scale(1, 1);
     }
 
-    40% {
-      transform: scale(1, 1);
-    }
-
-    50% {
-      transform: scale(1, .2);
-    }
-
+    50%,
     90% {
-      transform: scale(1, .2);
+        transform: scale(1, .2);
     }
 
-    100% {
-      transform: scale(1, 1);
-    }
-  }
+}
 
 .animation-5 {
-    padding: 20px;
     display: flex;
     align-items: flex-end;
     justify-content: center;
@@ -630,6 +595,7 @@ h1 {
     width: 100px;
     height: 100px;
     border-radius: 50%;
+    margin: auto;
 }
 
 .first-disk-6,
