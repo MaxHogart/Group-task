@@ -61,7 +61,6 @@ h1 {
 }
 
 @keyframes bounce {
-
     0%,
     10%,
     90%,
@@ -457,7 +456,6 @@ h1 {
 }
 
 @keyframes scaling-bar-1 {
-
     0%,
     40%,
     100% {
@@ -468,29 +466,23 @@ h1 {
     90% {
         transform: scale(1, 1);
     }
-
 }
 
 @keyframes scaling-bar-2 {
-
     0%,
     40%,
     100% {
         transform: scale(1, .4);
     }
 
-
     50%,
     90% {
         transform: scale(1, .8);
     }
-
-
 }
 
 
 @keyframes scaling-bar-4 {
-
     0%,
     40%,
     100% {
@@ -506,7 +498,6 @@ h1 {
 }
 
 @keyframes scaling-bar-5 {
-
     0%,
     40%,
     100% {
@@ -517,7 +508,6 @@ h1 {
     90% {
         transform: scale(1, .2);
     }
-
 }
 
 .animation-5 {
