@@ -61,7 +61,6 @@ h1 {
 }
 
 @keyframes bounce {
-
     0%,
     10%,
     90%,
@@ -326,8 +325,8 @@ h1 {
 }
 
 .animation-4 {
-	display: flex;
-	flex-direction: row;	
+    display: flex;
+    flex-direction: row;
     align-items: flex-end;
 }
 
@@ -361,7 +360,6 @@ h1 {
 }
 
 .animation-bar:nth-child(3) {
-   
     transform: scale(1, .6);
 }
 
@@ -413,7 +411,7 @@ h1 {
     }
 
     50% {
-      transform: translate(60px, 0)
+        transform: translate(60px, 0);
     }
 
     57% {
@@ -454,7 +452,6 @@ h1 {
 }
 
 @keyframes scaling-bar-1 {
-
     0%,
     40%,
     100% {
@@ -468,7 +465,6 @@ h1 {
 }
 
 @keyframes scaling-bar-2 {
-
     0%,
     40%,
     100% {
@@ -479,13 +475,9 @@ h1 {
     90% {
         transform: scale(1, .8);
     }
-
-
 }
 
-
 @keyframes scaling-bar-4 {
-
     0%,
     40%,
     100% {
@@ -499,7 +491,6 @@ h1 {
 }
 
 @keyframes scaling-bar-5 {
-
     0%,
     40%,
     100% {
@@ -510,7 +501,6 @@ h1 {
     90% {
         transform: scale(1, .2);
     }
-
 }
 
 .animation-5 {
