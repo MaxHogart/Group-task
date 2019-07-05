@@ -381,31 +381,31 @@ h1 {
     }
 
     10% {
-      transform: translate(15px, -12px)
+      transform: translate(15px, -12px);
     }
 
     17% {
-      transform: translate(22.5px, -28px)
+      transform: translate(22.5px, -28px);
     }
 
     20% {
-      transform: translate(30px, -24px)
+      transform: translate(30px, -24px);
     }
 
     27% {
-      transform: translate(37.5px, -40px)
+      transform: translate(37.5px, -40px);
     }
 
     30% {
-      transform: translate(45px, -36px)
+      transform: translate(45px, -36px);
     }
 
     37% {
-      transform: translate(52.5px, -52px)
+      transform: translate(52.5px, -52px);
     }
 
     40% {
-      transform: translate(60px, -48px)
+      transform: translate(60px, -48px);
     }
 
     50% {
@@ -413,35 +413,35 @@ h1 {
     }
 
     57% {
-      transform: translate(52.5px, -16px)
+      transform: translate(52.5px, -16px);
     }
 
     60% {
-      transform: translate(45px, -12px)
+      transform: translate(45px, -12px);
     }
 
     67% {
-      transform: translate(37.5px, -28px)
+      transform: translate(37.5px, -28px);
     }
 
     70% {
-      transform: translate(30px, -24px)
+      transform: translate(30px, -24px);
     }
 
     77% {
-      transform: translate(22.5px, -40px)
+      transform: translate(22.5px, -40px);
     }
 
     80% {
-      transform: translate(15px, -36px)
+      transform: translate(15px, -36px);
     }
 
     87% {
-      transform: translate(7.5px, -52px)
+      transform: translate(7.5px, -52px);
     }
 
     90% {
-        transform: translate(0, -48px)
+        transform: translate(0, -48px);
     }
 
     100% {
