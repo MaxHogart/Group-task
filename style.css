@@ -61,6 +61,7 @@ h1 {
 }
 
 @keyframes bounce {
+
     0%,
     10%,
     90%,
@@ -337,11 +338,11 @@ h1 {
 }
 
 .animation-ball {
-    position: relative;    
-	border-radius: 50%;
-	bottom: 12px;
-	right: 70px;
-	width: 10px;
+    position: relative;
+    border-radius: 50%;
+    bottom: 12px;
+    right: 70px;
+    width: 10px;
     height: 10px;
     animation: jumping-ball-4 4s infinite;
 }
@@ -352,7 +353,7 @@ h1 {
     animation: scaling-bar-1 4s infinite;
 }
 
-.animation-bar:nth-child(2) {    
+.animation-bar:nth-child(2) {
     transform: scale(1, .4);
     animation: scaling-bar-2 4s infinite;
 }
@@ -361,12 +362,12 @@ h1 {
     transform: scale(1, .6);
 }
 
-.animation-bar:nth-child(4) {    
+.animation-bar:nth-child(4) {
     transform: scale(1, .8);
     animation: scaling-bar-4 4s infinite;
 }
 
-.animation-bar:nth-child(5) {    
+.animation-bar:nth-child(5) {
     transform: scale(1, 1);
     animation: scaling-bar-5 4s infinite;
 }
@@ -377,35 +378,35 @@ h1 {
     }
 
     5% {
-      transform: translate(7.5px, -16px);
+        transform: translate(7.5px, -16px);
     }
 
     10% {
-      transform: translate(15px, -12px);
+        transform: translate(15px, -12px);
     }
 
     17% {
-      transform: translate(22.5px, -28px);
+        transform: translate(22.5px, -28px);
     }
 
     20% {
-      transform: translate(30px, -24px);
+        transform: translate(30px, -24px);
     }
 
     27% {
-      transform: translate(37.5px, -40px);
+        transform: translate(37.5px, -40px);
     }
 
     30% {
-      transform: translate(45px, -36px);
+        transform: translate(45px, -36px);
     }
 
     37% {
-      transform: translate(52.5px, -52px);
+        transform: translate(52.5px, -52px);
     }
 
     40% {
-      transform: translate(60px, -48px);
+        transform: translate(60px, -48px);
     }
 
     50% {
@@ -413,31 +414,31 @@ h1 {
     }
 
     57% {
-      transform: translate(52.5px, -16px);
+        transform: translate(52.5px, -16px);
     }
 
     60% {
-      transform: translate(45px, -12px);
+        transform: translate(45px, -12px);
     }
 
     67% {
-      transform: translate(37.5px, -28px);
+        transform: translate(37.5px, -28px);
     }
 
     70% {
-      transform: translate(30px, -24px);
+        transform: translate(30px, -24px);
     }
 
     77% {
-      transform: translate(22.5px, -40px);
+        transform: translate(22.5px, -40px);
     }
 
     80% {
-      transform: translate(15px, -36px);
+        transform: translate(15px, -36px);
     }
 
     87% {
-      transform: translate(7.5px, -52px);
+        transform: translate(7.5px, -52px);
     }
 
     90% {
@@ -450,6 +451,7 @@ h1 {
 }
 
 @keyframes scaling-bar-1 {
+
     0%,
     40%,
     100% {
@@ -463,6 +465,7 @@ h1 {
 }
 
 @keyframes scaling-bar-2 {
+
     0%,
     40%,
     100% {
@@ -476,6 +479,7 @@ h1 {
 }
 
 @keyframes scaling-bar-4 {
+
     0%,
     40%,
     100% {
@@ -489,6 +493,7 @@ h1 {
 }
 
 @keyframes scaling-bar-5 {
+
     0%,
     40%,
     100% {
