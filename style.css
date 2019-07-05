@@ -609,14 +609,14 @@ h1 {
 
 .first-disk-6 {
     animation-name: first-disk-6;
-    right: 15%;
-    top: 35%;
+    right: 5%;
+    top: 25%;
 }
 
 .second-disk-6 {
     animation-name: second-disk-6;
-    right: 35%;
-    top: 15%;
+    right: 25%;
+    top: 5%;
 }
 
 @keyframes rotation {
