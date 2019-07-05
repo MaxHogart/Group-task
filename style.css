@@ -333,7 +333,7 @@ h1 {
 
 .animation-bar {
     width: 10px;
-    height: 80%;
+    height: 60%;
     margin-left: 5px;
     transform-origin: center bottom;
     box-shadow: 1px 1px 1px rgba(28, 28, 61, 0.329);
@@ -342,7 +342,7 @@ h1 {
 .animation-ball {
     position: relative;    
 	border-radius: 50%;
-	bottom: 17%;
+	bottom: 12px;
 	right: 70px;
 	width: 10px;
     height: 10px;
@@ -355,8 +355,7 @@ h1 {
     animation: scaling-bar-1 4s infinite;
 }
 
-.animation-bar:nth-child(2) {
-    
+.animation-bar:nth-child(2) {    
     transform: scale(1, .4);
     animation: scaling-bar-2 4s infinite;
 }
@@ -366,14 +365,12 @@ h1 {
     transform: scale(1, .6);
 }
 
-.animation-bar:nth-child(4) {
-    
+.animation-bar:nth-child(4) {    
     transform: scale(1, .8);
     animation: scaling-bar-4 4s infinite;
 }
 
-.animation-bar:nth-child(5) {
-    
+.animation-bar:nth-child(5) {    
     transform: scale(1, 1);
     animation: scaling-bar-5 4s infinite;
 }
@@ -384,35 +381,35 @@ h1 {
     }
 
     5% {
-      transform: translate(7.5px, -20px);
+      transform: translate(7.5px, -16px);
     }
 
     10% {
-      transform: translate(15px, -16px)
+      transform: translate(15px, -12px)
     }
 
     17% {
-      transform: translate(22.5px, -36px)
+      transform: translate(22.5px, -28px)
     }
 
     20% {
-      transform: translate(30px, -32px)
+      transform: translate(30px, -24px)
     }
 
     27% {
-      transform: translate(37.5px, -52px)
+      transform: translate(37.5px, -40px)
     }
 
     30% {
-      transform: translate(45px, -48px)
+      transform: translate(45px, -36px)
     }
 
     37% {
-      transform: translate(52.5px, -68px)
+      transform: translate(52.5px, -52px)
     }
 
     40% {
-      transform: translate(60px, -64px)
+      transform: translate(60px, -48px)
     }
 
     50% {
@@ -420,35 +417,35 @@ h1 {
     }
 
     57% {
-      transform: translate(52.5px, -20px)
+      transform: translate(52.5px, -16px)
     }
 
     60% {
-      transform: translate(45px, -16px)
+      transform: translate(45px, -12px)
     }
 
     67% {
-      transform: translate(37.5px, -36px)
+      transform: translate(37.5px, -28px)
     }
 
     70% {
-      transform: translate(30px, -32px)
+      transform: translate(30px, -24px)
     }
 
     77% {
-      transform: translate(22.5px, -52px)
+      transform: translate(22.5px, -40px)
     }
 
     80% {
-      transform: translate(15px, -48px)
+      transform: translate(15px, -36px)
     }
 
     87% {
-      transform: translate(7.5px, -68px)
+      transform: translate(7.5px, -52px)
     }
 
     90% {
-        transform: translate(0, -64px)
+        transform: translate(0, -48px)
     }
 
     100% {
@@ -468,7 +465,6 @@ h1 {
     90% {
         transform: scale(1, 1);
     }
-
 }
 
 @keyframes scaling-bar-2 {
@@ -478,7 +474,6 @@ h1 {
     100% {
         transform: scale(1, .4);
     }
-
 
     50%,
     90% {
@@ -496,8 +491,6 @@ h1 {
     100% {
         transform: scale(1, .8);
     }
-
-
 
     50%,
     90% {
