@@ -325,54 +325,54 @@ h1 {
 }
 
 .animation-4 {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-around;
+	display: flex;
+	flex-direction: row;	
     align-items: flex-end;
 }
 
 .animation-bar {
-    width: 11%;
+    width: 10px;
     height: 80%;
+    margin-left: 5px;
     transform-origin: center bottom;
     box-shadow: 1px 1px 1px rgba(28, 28, 61, 0.329);
 }
 
 .animation-ball {
-    position: relative;
-    border-radius: 50%;
-    bottom: 17%;
-    right: 127px;
-    width: 15px;
-    height: 15px;
+    position: relative;    
+	border-radius: 50%;
+	bottom: 17%;
+	right: 70px;
+	width: 10px;
+    height: 10px;
     animation: jumping-ball-4 4s infinite;
 }
 
 .animation-bar:nth-child(1) {
-    left: 0;
+    margin-left: 25px;
     transform: scale(1, .2);
     animation: scaling-bar-1 4s infinite;
 }
 
 .animation-bar:nth-child(2) {
-    left: 0;
+    
     transform: scale(1, .4);
     animation: scaling-bar-2 4s infinite;
 }
 
 .animation-bar:nth-child(3) {
-    left: 0;
+   
     transform: scale(1, .6);
 }
 
 .animation-bar:nth-child(4) {
-    left: 0;
+    
     transform: scale(1, .8);
     animation: scaling-bar-4 4s infinite;
 }
 
 .animation-bar:nth-child(5) {
-    left: 0;
+    
     transform: scale(1, 1);
     animation: scaling-bar-5 4s infinite;
 }
@@ -383,67 +383,67 @@ h1 {
     }
 
     5% {
-        transform: translate(14px, -20px);
+      transform: translate(7.5px, -20px);
     }
 
     10% {
-        transform: translate(27px, -16px)
+      transform: translate(15px, -16px)
     }
 
     17% {
-        transform: translate(41px, -36px)
+      transform: translate(22.5px, -36px)
     }
 
     20% {
-        transform: translate(51px, -32px)
+      transform: translate(30px, -32px)
     }
 
     27% {
-        transform: translate(68px, -52px)
+      transform: translate(37.5px, -52px)
     }
 
     30% {
-        transform: translate(77px, -48px)
+      transform: translate(45px, -48px)
     }
 
     37% {
-        transform: translate(95px, -68px)
+      transform: translate(52.5px, -68px)
     }
 
     40% {
-        transform: translate(103px, -64px)
+      transform: translate(60px, -64px)
     }
 
     50% {
-        transform: translate(103px, 0)
+      transform: translate(60px, 0)
     }
 
     57% {
-        transform: translate(95px, -20px)
+      transform: translate(52.5px, -20px)
     }
 
     60% {
-        transform: translate(77px, -16px)
+      transform: translate(45px, -16px)
     }
 
     67% {
-        transform: translate(68px, -36px)
+      transform: translate(37.5px, -36px)
     }
 
     70% {
-        transform: translate(54px, -32px)
+      transform: translate(30px, -32px)
     }
 
     77% {
-        transform: translate(41px, -52px)
+      transform: translate(22.5px, -52px)
     }
 
     80% {
-        transform: translate(27px, -48px)
+      transform: translate(15px, -48px)
     }
 
     87% {
-        transform: translate(14px, -68px)
+      transform: translate(7.5px, -68px)
     }
 
     90% {
