@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="style.css">
+  <script defer src="calc.js"></script>
+  <title>FL-15 Group task 2</title>
+</head>
+
+<body>
+  <div class="section">
+    <div class="shape">
+      <div class="shape-img parallelogram"></div>
+    </div>
+    <div class="shape-params">
+      <label>A:</label>
+      <input id="side-a-of-parallelogram" class="input-value" min="0" type="number">
+      <label>B:</label>
+      <input id="side-b-of-parallelogram" class="input-value" min="0" type="number">
+      <label>angle:</label>
+      <input id="angle-of-parallelogram" class="input-value" min="0" type="number">
+      <div class="shape-output">
+        <p>Area: <span id="area-of-parallelogram" class="output-value">-</span></p>
+        <p>h: <span id="height-of-parallelogram" class="output-value">-</span></p>
+      </div>
+    </div>
+  </div>
+  <div class="section">
+    <div class="shape">
+      <div class="shape-img disk"></div>
+    </div>
+    <div class="shape-params">
+      <label>R:</label>
+      <input id="radius-of-disk" class="input-value" min="0" type="number">
+      <div class="shape-output">
+        <p>Area: <span id="area-of-disk" class="output-value">-</span></p>
+        <p>L: <span id="length-of-disk" class="output-value">-</span></p>
+      </div>
+    </div>
+  </div>
+  <div class="section">
+    <div class="shape">
+      <div class="shape-img ellipse"></div>
+    </div>
+    <div class="shape-params">
+      <label>Horizontal R:</label>
+      <input id="horizontal-radius-of-ellipse" class="input-value" min="0" type="number">
+      <label>Vertical R:</label>
+      <input id="vertical-radius-of-ellipse" class="input-value" min="0" type="number">
+      <div class="shape-output">
+        <p>Area: <span id="area-of-ellipse" class="output-value">-</span></p>
+        <p>L: <span id="length-of-ellipse" class="output-value">-</span></p>
+      </div>
+    </div>
+  </div>
+  <div class="section">
+    <div class="shape">
+      <div class="shape-img square"></div>
+    </div>
+    <div class="shape-params">
+      <label>A:</label>
+      <input id="side-of-square" class="input-value" min="0" type="number">
+      <div class="shape-output">
+        <p>Diagonal: <span id="diagonal-of-square" class="output-value">-</span></p>
+        <p>Area: <span id="area-of-square" class="output-value">-</span></p>
+      </div>
+    </div>
+  </div>
+  <div class="section">
+    <div class="shape">
+      <div class="shape-img rectangle"></div>
+    </div>
+    <div class="shape-params">
+      <label>A:</label>
+      <input id="side-a-of-rectangle" class="input-value" min="0" type="number">
+      <label>B:</label>
+      <input id="side-b-of-rectangle" class="input-value" min="0" type="number">
+      <div class="shape-output">
+        <p>Diagonal: <span id="diagonal-of-rectangle" class="output-value">-</span></p>
+        <p>Area: <span id="area-of-rectangle" class="output-value">-</span></p>
+      </div>
+    </div>
+  </div>
+  <div class="section">
+    <div class="shape">
+      <div class="shape-img right-triangle"></div>
+    </div>
+    <div class="shape-params">
+      <label>A:</label>
+      <input id="side-a-of-right-triangle" class="input-value" min="0" type="number">
+      <label>B:</label>
+      <input id="side-b-of-right-triangle" class="input-value" min="0" type="number">
+      <p id="inline-p">C: <span id="side-c-of-right-triangle" class="output-value">-</span></p>
+      <div class="shape-output">
+        <p>a: <span id="angle-a-of-right-triangle" class="output-value">-</span></p>
+        <p>b: <span id="angle-b-of-right-triangle" class="output-value">-</span></p>
+        <p>c: <span id="angle-c-of-right-triangle" class="output-value">-</span></p>
+        <p>Area: <span id="area-of-right-triangle" class="output-value">-</span></p>
+        <p>Height: <span id="height-of-right-triangle" class="output-value">-</span></p>
+      </div>
+    </div>
+  </div>
+  <div id="calculation-buttons">
+    <button id="calculate">Calculate</button>
+    <input id="checkbox" type="checkbox"><label for="checkbox">Instant calculation</label>
+  </div>
+</body>
+
+</html>

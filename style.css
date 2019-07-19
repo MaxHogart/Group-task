@@ -1,0 +1,112 @@
+body {
+	width: 1000px;
+	margin: 0 auto;
+	font-size: 20px;
+	font-family: Arial, sans-serif;
+}
+
+input {
+	width: 50px;
+	height: 25px;
+	font-size: 20px;
+	padding: 0 5px;
+}
+
+input, p {
+	margin-right: 50px;
+}
+
+label, p {
+	text-align: left;
+}
+
+button {
+	font-size: 20px;
+	text-transform: uppercase;
+	background-color: transparent;
+	padding: 10px 20px;
+	border-radius: 20%;
+	border: 3px solid #000;
+	margin: 0 auto;
+}
+
+.section {
+	display: flex;
+	align-items: center;
+	border-bottom: 1px solid #000;
+	padding: 40px 5px;
+}
+
+.shape {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	width: 300px;
+}
+
+.shape-img {
+	border: 5px solid #000;
+}
+
+.shape-params {
+	height: 50%;
+	margin-left: 50px;
+}
+
+.shape-output {
+	display: flex;
+}
+
+.parallelogram {
+	width: 160px;  
+	height: 50px;
+	transform: skew(-35deg);
+}
+
+.disk {
+	width: 80px;
+	height: 80px;
+	border-radius: 50%;
+}
+
+.ellipse {
+	width: 140px;
+	height: 70px;
+	border-radius: 50%;
+}
+
+.square {
+	width: 130px;
+	height: 130px;
+}
+
+.rectangle {
+	width: 170px;
+	height: 45px;
+}
+
+.right-triangle {
+	width: 100px;
+	height: 120px;
+	clip-path: polygon(0 0, 0% 100%, 100% 100%);
+	position: relative;
+}
+
+.right-triangle:after {
+	content: '';
+	display: block;
+	width: 200%;
+	height: 100%;
+	transform: rotate(50deg);
+	position: absolute;
+	border-bottom: 5px solid #000;
+	bottom: 23%;
+}
+
+#calculation-buttons {
+    margin: 30px;
+}
+
+#inline-p {
+    display: inline;
+}
