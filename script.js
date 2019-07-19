@@ -8,8 +8,8 @@ function areaOfParallelogram(
     angleInDegrees
 ) {
     let isFilled = typeof sideA === 'undefined' || typeof sideB === 'undefined' || typeof angleInDegrees === 'undefined';
-    let isSideANotValid = sideA < 0;
-    let isSideBNotValid = sideB < 0;
+    let isSideANotValid = sideA <= 0;
+    let isSideBNotValid = sideB <= 0;
     const MAX_AMOUNT_OF_ANGLES_IN_PARALLELOGRAM = 179;
     let validDataForAngles = angleInDegrees < 0 || angleInDegrees > MAX_AMOUNT_OF_ANGLES_IN_PARALLELOGRAM;
     if (isFilled || isSideANotValid || isSideBNotValid || validDataForAngles) {
@@ -25,11 +25,20 @@ function heightOfParallelogram(
     sideB,
     angleInDegrees
 ) {
-    return roundToThousandth(areaOfParallelogram(sideA, sideB, angleInDegrees) / sideA);
+    let isFilled = typeof sideA === 'undefined' || typeof sideB === 'undefined' || typeof angleInDegrees === 'undefined';
+    let isSideANotValid = sideA <= 0;
+    let isSideBNotValid = sideB <= 0;
+    const MAX_AMOUNT_OF_ANGLES_IN_PARALLELOGRAM = 179;
+    let validDataForAngles = angleInDegrees < 0 || angleInDegrees > MAX_AMOUNT_OF_ANGLES_IN_PARALLELOGRAM;
+    if (isFilled || isSideANotValid || isSideBNotValid || validDataForAngles) {
+        return '-';
+    } else {
+        return roundToThousandth(areaOfParallelogram(sideA, sideB, angleInDegrees) / sideA);
+    }
 }
 //  I suppose sides are more than 0, and angle will be between 0 and 180 degrees
 function areaOfDisk(radius) {
-    if (radius < 0 || typeof radius === 'undefined') {
+    if (radius <= 0 || typeof radius === 'undefined') {
         return '-';
     } else {
         const POWER = 2;
@@ -37,7 +46,7 @@ function areaOfDisk(radius) {
     }
 }
 function lengthOfDisk(radius) {
-    if (radius < 0 || typeof radius === 'undefined') {
+    if (radius <= 0 || typeof radius === 'undefined') {
         return '-';
     } else {
         const COEFFICIENT = 2;
@@ -46,7 +55,7 @@ function lengthOfDisk(radius) {
 }
 // radius is more than 0
 function areaOfEllipse(horizontalRadius, verticalRadius) {
-    let dataValidations = horizontalRadius < 0 || verticalRadius < 0;
+    let dataValidations = horizontalRadius <= 0 || verticalRadius <= 0;
     if (dataValidations || typeof horizontalRadius === 'undefined' || typeof verticalRadius === 'undefined') {
         return '-';
     } else {
@@ -54,7 +63,7 @@ function areaOfEllipse(horizontalRadius, verticalRadius) {
     }
 }
 function lengthOfEllipse(horizontalRadius, verticalRadius) {
-    let dataValidations = horizontalRadius < 0 || verticalRadius < 0;
+    let dataValidations = horizontalRadius <= 0 || verticalRadius <= 0;
     if (dataValidations || typeof horizontalRadius === 'undefined' || typeof verticalRadius === 'undefined') {
         return '-';
     } else {
@@ -66,7 +75,7 @@ function lengthOfEllipse(horizontalRadius, verticalRadius) {
 }
 // horizontal and vertacal radius are more than 0
 function areaOfSquare(side) {
-    if (side < 0 || typeof side === 'undefined') {
+    if (side <= 0 || typeof side === 'undefined') {
         return '-'
     } else {
         const POWER = 2;
@@ -82,8 +91,8 @@ function areaOfRectangle(side1, side2) {
 }
 function diagonalOfRectangle(sideA, sideB) {
     let isFilled = typeof sideA === 'undefined' || typeof sideB === 'undefined';
-    let isSideANotValid = sideA < 0;
-    let isSideBNotValid = sideB < 0;
+    let isSideANotValid = sideA <= 0;
+    let isSideBNotValid = sideB <= 0;
     if (isFilled || isSideANotValid || isSideBNotValid) {
         return '-';
     } else {
@@ -92,15 +101,22 @@ function diagonalOfRectangle(sideA, sideB) {
 }
 function areaOfRightTriangle(cathetus1, cathetus2) {
     const RELATION_BETWEEN_RIGHT_TRIANGLE_AND_RECTANGLE = 2;
-    return roundToThousandth(areaOfRectangle(cathetus1, cathetus2) / RELATION_BETWEEN_RIGHT_TRIANGLE_AND_RECTANGLE)
+    let isFilled = typeof cathetus1 === 'undefined' || typeof cathetus2 === 'undefined';
+    let isSideANotValid = cathetus1 <= 0;
+    let isSideBNotValid = cathetus2 <= 0;
+    if (isFilled || isSideANotValid || isSideBNotValid) {
+        return '-'
+    } else {
+        return roundToThousandth(areaOfRectangle(cathetus1, cathetus2) / RELATION_BETWEEN_RIGHT_TRIANGLE_AND_RECTANGLE)
+    }
 }
 function hypotenuseOfRightTriangle(cathetus1, cathetus2) {
     return diagonalOfRectangle(cathetus1, cathetus2)
 }
 function heightOfRightTriangle(cathetus1, cathetus2) {
     let isFilled = typeof cathetus1 === 'undefined' || typeof cathetus2 === 'undefined';
-    let isSideANotValid = cathetus1 < 0;
-    let isSideBNotValid = cathetus2 < 0;
+    let isSideANotValid = cathetus1 <= 0;
+    let isSideBNotValid = cathetus2 <= 0;
     if (isFilled || isSideANotValid || isSideBNotValid) {
         return '-'
     } else {
@@ -110,7 +126,28 @@ function heightOfRightTriangle(cathetus1, cathetus2) {
         return roundToThousandth(COEFFICIENT * areaOfTriangle / hypotenuse);
     }
 }
-
+function angleA(cathetus1, cathetus2) {
+    let isFilled = typeof cathetus1 === 'undefined' || typeof cathetus2 === 'undefined';
+    let isSideANotValid = cathetus1 <= 0;
+    let isSideBNotValid = cathetus2 <= 0;
+    if (isFilled || isSideANotValid || isSideBNotValid) {
+        return '-'
+    } else {
+        const DEGREES_IN_RADIANS = 180;
+        return roundToThousandth(DEGREES_IN_RADIANS / Math.PI * Math.acos(cathetus1 / hypotenuseOfRightTriangle(cathetus1, cathetus2)));
+    }
+}
+function angleB(cathetus1, cathetus2) {
+    let isFilled = typeof cathetus1 === 'undefined' || typeof cathetus2 === 'undefined';
+    let isSideANotValid = cathetus1 <= 0;
+    let isSideBNotValid = cathetus2 <= 0;
+    if (isFilled || isSideANotValid || isSideBNotValid) {
+        return '-'
+    } else {
+        const DEGREES_IN_RADIANS = 180;
+        return roundToThousandth(DEGREES_IN_RADIANS / Math.PI * Math.acos(cathetus2 / hypotenuseOfRightTriangle(cathetus1, cathetus2)));
+    }
+}
 // events
 
 function defaultResultValue() {
@@ -146,35 +183,33 @@ function calculation() {
     document.getElementById('length-of-disk').innerHTML = lengthOfDisk(RADIUS_OF_DISK);
     document.getElementById('area-of-ellipse').innerHTML = areaOfEllipse(HORIZONTAL_RADIUS_OF_ELLIPSE, VERTICAL_RADIUS_OF_ELLIPSE);
     document.getElementById('length-of-ellipse').innerHTML = lengthOfEllipse(HORIZONTAL_RADIUS_OF_ELLIPSE, VERTICAL_RADIUS_OF_ELLIPSE);
-    document.getElementById('area-of-square').innerHTML = areaOfDisk(SIDE_OF_SQUARE);
+    document.getElementById('area-of-square').innerHTML = areaOfSquare(SIDE_OF_SQUARE);
     document.getElementById('diagonal-of-square').innerHTML = diagonalOfSquare(SIDE_OF_SQUARE);
     document.getElementById('area-of-rectangle').innerHTML = areaOfRectangle(SIDE_A_OF_RECTANGLE, SIDE_B_OF_RECTANGLE);
     document.getElementById('diagonal-of-rectangle').innerHTML = diagonalOfRectangle(SIDE_A_OF_RECTANGLE, SIDE_B_OF_RECTANGLE);
     document.getElementById('side-c-of-right-triangle').innerHTML = hypotenuseOfRightTriangle(SIDE_A_OF_RIGHT_TRIANGLE, SIDE_B_OF_RIGHT_TRIANGLE);
-    document.getElementById('angle-a-of-right-triangle').innerHTML = '?';
-    document.getElementById('angle-b-of-right-triangle').innerHTML = '?';
+    document.getElementById('angle-a-of-right-triangle').innerHTML = angleA(SIDE_A_OF_RIGHT_TRIANGLE, SIDE_B_OF_RIGHT_TRIANGLE);
+    document.getElementById('angle-b-of-right-triangle').innerHTML = angleB(SIDE_A_OF_RIGHT_TRIANGLE, SIDE_B_OF_RIGHT_TRIANGLE);
     document.getElementById('angle-c-of-right-triangle').innerHTML = 90;
     document.getElementById('area-of-right-triangle').innerHTML = areaOfRightTriangle(SIDE_A_OF_RIGHT_TRIANGLE, SIDE_B_OF_RIGHT_TRIANGLE);
-    document.getElementById('height-of-right-triangle').innerHTML = SIDE_A_OF_RIGHT_TRIANGLE;
+    document.getElementById('height-of-right-triangle').innerHTML = heightOfRightTriangle(SIDE_A_OF_RIGHT_TRIANGLE, SIDE_B_OF_RIGHT_TRIANGLE);
 }
 
 document.getElementById('calculate').onclick = calculation;
 
-let inputValue = document.getElementsByClassName('input-value');
-for (let item of inputValue) {
+const INPUT_VALUE = document.getElementsByClassName('input-value');
+for (let item of INPUT_VALUE) {
     item.addEventListener('input', defaultResultValue);
 }
 
 function instantCalc() {
     calculation();
     if (document.getElementById('checkbox').checked) {
-        let inputValue = document.getElementsByClassName('input-value');
-        for (let item of inputValue) {
+        for (let item of INPUT_VALUE) {
             item.addEventListener('input', calculation);
         }
     } else {
-        let inputValue = document.getElementsByClassName('input-value');
-        for (let item of inputValue) {
+        for (let item of INPUT_VALUE) {
             item.removeEventListener('input', calculation);
         }
     }
