@@ -42,10 +42,12 @@ button {
 	justify-content: center;
 	align-items: center;
 	width: 300px;
+	height: 300px;
 }
 
 .shape-img {
 	border: 5px solid #000;
+	box-sizing: border-box;
 }
 
 .shape-params {
@@ -88,11 +90,12 @@ button {
 .right-triangle {
 	width: 100px;
 	height: 120px;
-	clip-path: polygon(0 0, 0% 100%, 100% 100%);
+	/* clip-path: polygon(0 0, 0% 100%, 100% 100%); */
+	border: none;
 	position: relative;
 }
 
-.right-triangle:after {
+/* .right-triangle:after {
 	content: '';
 	display: block;
 	width: 200%;
@@ -101,7 +104,7 @@ button {
 	position: absolute;
 	border-bottom: 5px solid #000;
 	bottom: 23%;
-}
+} */
 
 #calculation-buttons {
     margin: 30px;
