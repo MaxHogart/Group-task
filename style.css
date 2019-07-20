@@ -45,7 +45,7 @@ p, .input-value {
 }
 
 .shape-img {
-	border: 5px solid #000;
+	border: 1px solid #000;
 	box-sizing: border-box;
 }
 
@@ -87,29 +87,15 @@ p, .input-value {
 }
 
 .right-triangle {
-/*	width: 100px;
-	height: 120px;*/
-	/* clip-path: polygon(0 0, 0% 100%, 100% 100%); */
 	border: none;
 	position: relative;
 }
 
 svg {
 	overflow: visible;
-	display: inline-block;
 	width: 100%;
 	height: 100%;
 }
-/* .right-triangle:after {
-	content: '';
-	display: block;
-	width: 200%;
-	height: 100%;
-	transform: rotate(50deg);
-	position: absolute;
-	border-bottom: 5px solid #000;
-	bottom: 23%;
-} */
 
 #calculation-buttons {
     margin: 30px;
