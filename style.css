@@ -5,17 +5,6 @@ body {
 	font-family: Arial, sans-serif;
 }
 
-input {
-	width: 50px;
-	height: 25px;
-	font-size: 20px;
-	padding: 0 5px;
-}
-
-input, p {
-	margin-right: 50px;
-}
-
 label, p {
 	text-align: left;
 }
@@ -28,6 +17,17 @@ button {
 	border-radius: 20%;
 	border: 3px solid #000;
 	margin: 0 auto;
+}
+
+p, .input-value {
+	margin-right: 50px;
+}
+
+.input-value {
+	width: 50px;
+	height: 25px;
+	font-size: 20px;
+	padding: 0 5px;
 }
 
 .section {
@@ -111,4 +111,8 @@ button {
 
 #inline-p {
     display: inline;
+}
+
+#checkbox {
+	margin-left: 30px;
 }
