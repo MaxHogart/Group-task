@@ -78,7 +78,7 @@ function lengthOfEllipse(horizontalRadius, verticalRadius) {
         return roundToThousandth(Math.PI * COEFFICIENT * processOfCalc);
     }
 }
-// horizontal and vertacal radius are more than 0
+// horizontal and vertical radius are more than 0
 function areaOfSquare(side) {
     if (side <= 0 || typeof side === 'undefined') {
         return '-'
@@ -131,7 +131,7 @@ function heightOfRightTriangle(cathetus1, cathetus2) {
         return roundToThousandth(COEFFICIENT * areaOfTriangle / hypotenuse);
     }
 }
-function angleA(cathetus1, cathetus2) {
+function angleB(cathetus1, cathetus2) {
     let isFilled = typeof cathetus1 === 'undefined' || typeof cathetus2 === 'undefined';
     let isSideANotValid = cathetus1 <= 0;
     let isSideBNotValid = cathetus2 <= 0;
@@ -139,7 +139,7 @@ function angleA(cathetus1, cathetus2) {
         return '-'
     } else {
         const DEGREES_IN_RADIANS = 180;
-        return roundToThousandth(DEGREES_IN_RADIANS / Math.PI * Math.acos(cathetus1 / hypotenuseOfRightTriangle(cathetus1, cathetus2)));
+        return roundToThousandth(DEGREES_IN_RADIANS / Math.PI * Math.acos(cathetus2 / Math.hypot(cathetus1, cathetus2)));
     }
 }
 function angleB(cathetus1, cathetus2) {
@@ -150,7 +150,7 @@ function angleB(cathetus1, cathetus2) {
         return '-'
     } else {
         const DEGREES_IN_RADIANS = 180;
-        return roundToThousandth(DEGREES_IN_RADIANS / Math.PI * Math.acos(cathetus2 / hypotenuseOfRightTriangle(cathetus1, cathetus2)));
+        return roundToThousandth(DEGREES_IN_RADIANS / Math.PI * Math.acos(cathetus1 / Math.hypot(cathetus1, cathetus2)));
     }
 }
 // events
@@ -195,57 +195,56 @@ function calculation() {
     document.getElementById('area-of-ellipse').innerHTML = areaOfEllipse(
         value.HORIZONTAL_RADIUS_OF_ELLIPSE,
         value.VERTICAL_RADIUS_OF_ELLIPSE
-        );
+    );
     document.getElementById('length-of-ellipse').innerHTML = lengthOfEllipse(
         value.HORIZONTAL_RADIUS_OF_ELLIPSE,
         value.VERTICAL_RADIUS_OF_ELLIPSE
-        );
+    );
     document.getElementById('area-of-square').innerHTML = areaOfSquare(value.SIDE_OF_SQUARE);
     document.getElementById('diagonal-of-square').innerHTML = diagonalOfSquare(value.SIDE_OF_SQUARE);
     document.getElementById('area-of-rectangle').innerHTML = areaOfRectangle(
         value.SIDE_A_OF_RECTANGLE,
         value.SIDE_B_OF_RECTANGLE
-        );
+    );
     document.getElementById('diagonal-of-rectangle').innerHTML = diagonalOfRectangle(
         value.SIDE_A_OF_RECTANGLE,
         value.SIDE_B_OF_RECTANGLE
-        );
+    );
     document.getElementById('side-c-of-right-triangle').innerHTML = hypotenuseOfRightTriangle(
         value.SIDE_A_OF_RIGHT_TRIANGLE,
         value.SIDE_B_OF_RIGHT_TRIANGLE
-        );
+    );
     document.getElementById('angle-a-of-right-triangle').innerHTML = angleA(
         value.SIDE_A_OF_RIGHT_TRIANGLE,
         value.SIDE_B_OF_RIGHT_TRIANGLE
-        );
+    );
     document.getElementById('angle-b-of-right-triangle').innerHTML = angleB(
         value.SIDE_A_OF_RIGHT_TRIANGLE,
         value.SIDE_B_OF_RIGHT_TRIANGLE
-        );
+    );
     document.getElementById('angle-c-of-right-triangle').innerHTML = 90;
     document.getElementById('area-of-right-triangle').innerHTML = areaOfRightTriangle(
         value.SIDE_A_OF_RIGHT_TRIANGLE,
         value.SIDE_B_OF_RIGHT_TRIANGLE
-        );
+    );
     document.getElementById('height-of-right-triangle').innerHTML = heightOfRightTriangle(
         value.SIDE_A_OF_RIGHT_TRIANGLE,
         value.SIDE_B_OF_RIGHT_TRIANGLE
-        );
+    );
 }
 
 function draw() {
-    let value = getValue(),
-        parallelogram = document.querySelector('.parallelogram'),
-        disk = document.querySelector('.disk'),
-        ellipse = document.querySelector('.ellipse'),
-        square = document.querySelector('.square'),
-        rectangle = document.querySelector('.rectangle'),
-        rightTriangle = document.querySelector('.right-triangle polygon');
+    let value = getValue();
+    let parallelogram = document.querySelector('.parallelogram');
+    let disk = document.querySelector('.disk');
+    let ellipse = document.querySelector('.ellipse');
+    let square = document.querySelector('.square');
+    let rectangle = document.querySelector('.rectangle');
+    let rightTriangle = document.querySelector('.right-triangle polygon');
 
-    console.log(parallelogram.style);
     parallelogram.style.height = value.SIDE_A_OF_PARALLELOGRAM * Math.sin(angleInRadians(value.ANGLE_OF_PARALLELOGRAM)) + 'px';
     parallelogram.style.width = value.SIDE_B_OF_PARALLELOGRAM + 'px';
-    parallelogram.style.transform = 'skew(' + value.ANGLE_OF_PARALLELOGRAM + 'deg)';
+    parallelogram.style.transform = `skew(${value.ANGLE_OF_PARALLELOGRAM - 90}deg)`;
 
     disk.style.width = value.RADIUS_OF_DISK + 'px';
     disk.style.height = value.RADIUS_OF_DISK + 'px';
@@ -288,4 +287,3 @@ function instantCalc() {
 }
 
 document.getElementById('checkbox').onchange = instantCalc;
-
